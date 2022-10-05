@@ -33,14 +33,15 @@ Die Versionen können sich von System zu System unterscheiden, sollten aber nach
 Anschließend muss die virtuelle Umgebung für Python aktiviert und die benötigten Pakete installiert werden:
 
 ```
-$ source ./venv/bin/activate
+$ python3 -m venv venv
+$ source ./venv/bin/activate (/venv/Script/activate)
 $ pip3 install -r requirements.txt
 ```
 
 Nun kann der Server gestartet werden:
 
 ```
-$ python3 manage.py runserver
+$ python3 manage.py runserver (py manage.py runserver)
 ```
 
 Der Server antwortet uns mit [einer Willkommensnachricht](http://127.0.0.1:8000/hello).
