@@ -4,3 +4,7 @@ from django.http import JsonResponse
 
 def hello_world(request):
 	return JsonResponse({'message':'Hallo Bielefeld!'})
+
+def add_tree(request):
+	
+	return
