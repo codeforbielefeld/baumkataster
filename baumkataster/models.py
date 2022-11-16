@@ -20,3 +20,7 @@ class Tree(models.Model):
     lat = models.DecimalField(max_digits=9, decimal_places=6)
     type_of_care = models.IntegerField(default=0)
     user_list = models.ManyToManyField(User)
+
+    def update(self, data):
+        for attribute in ["name", "height", "diameter", "kind", "long", "lat", "type_of_care"]:
+            setattr(self, attribute, data[attribute])
