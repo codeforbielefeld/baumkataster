@@ -31,6 +31,8 @@ class TreeView(View):
         tree.lat = data["lat"]
         tree.type_of_care = data["type_of_care"]
         tree.save()
+
+        # TODO: fix serialization here
         tree.user_list.set(data["user_list"])
         tree.save()
 

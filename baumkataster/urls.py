@@ -11,5 +11,6 @@ def hello_world(request):
 urlpatterns = [
     path('hello', hello_world),
     path('trees', csrf_exempt(TreeView.index), name='index'),
+    path('add', csrf_exempt(TreeView.as_view())),
     path('trees/<int:id>', csrf_exempt(TreeView.as_view())),
 ]
