@@ -13,4 +13,5 @@ urlpatterns = [
     path('trees', csrf_exempt(TreeView.index), name='index'),
     path('add', csrf_exempt(TreeView.as_view())),
     path('trees/<int:id>', csrf_exempt(TreeView.as_view())),
+    # TODO: define urls for patch and delete
 ]
