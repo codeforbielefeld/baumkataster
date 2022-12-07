@@ -9,7 +9,7 @@ from baumkataster.models import Tree
 
 class TreeView(View):
 
-    http_method_names = ['index', 'get', 'post', 'put', 'patch', 'delete']
+    http_method_names = ['index', 'get', 'post', 'put', 'delete']
 
     def index(self):
         trees = Tree.objects.all()
@@ -40,7 +40,7 @@ class TreeView(View):
         response.headers["Content-Type"] = "application/json"
         return response
 
-    def patch(self, request, id):
+    def put(self, request, id):
         tree = Tree.objects.get(pk=id)
 
         data = json.loads(request.body)

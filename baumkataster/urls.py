@@ -10,8 +10,7 @@ def hello_world(request):
 
 urlpatterns = [
     path('hello', hello_world),
-    path('trees', csrf_exempt(TreeView.index), name='index'),
-    path('add', csrf_exempt(TreeView.as_view())),
-    path('trees/<int:id>', csrf_exempt(TreeView.as_view())),
-    # TODO: define urls for patch and delete
+    path('trees', csrf_exempt(TreeView.as_view())),
+    #path('add', csrf_exempt(TreeView.as_view()), name='post'),
+    path('trees/<int:id>', csrf_exempt(TreeView.as_view()))
 ]
