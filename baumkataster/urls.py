@@ -10,7 +10,6 @@ def hello_world(request):
 
 urlpatterns = [
     path('hello', hello_world),
-    path('trees', csrf_exempt(TreeView.as_view())),
-    #path('add', csrf_exempt(TreeView.as_view()), name='post'),
-    path('trees/<int:id>', csrf_exempt(TreeView.as_view()))
+    path('trees', csrf_exempt(TreeView.as_view())), #accesses tree-database and understands what we want to do (e.g. add/index/put...)
+    path('trees/<int:id>', csrf_exempt(TreeView.as_view())) #enables user to access specific tree by id
 ]
