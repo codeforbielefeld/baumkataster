@@ -1,7 +1,11 @@
+from django.conf import settings
 import pandas as pd
 import csv
 import pyproj
-from "./baumkataster/models.py" import Tree
+import sys
+sys.path.insert(0, "..")
+#settings.configure()
+from ..baumkataster.models import Tree
 
 #read data
 df = pd.read_csv("./Jupyter/Data/einzelbaeume.csv", delimiter=";")
@@ -32,7 +36,7 @@ print(df.head())
 
 print(df[10])
 
-for tree in df:
+for tree in df[:50]:
     tree = Tree(oid = tree.oid,
                 name = tree.Baumart_Deutsch,
                 height = tree.Baumhoehe,
