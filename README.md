@@ -68,3 +68,5 @@ Nach kurzer Wartezeit öffnet sich ein Browser-Fenster und lädt die Seite.
 Wenn alles funktioniert, siehst du jetzt eine React-Applikation, die die Nachricht unseres Servers ausgibt.
 
 **Jetzt kann es losgehen!**
+
+Weitere Informationen sind im [Wiki](https://github.com/codeforbielefeld/baumkataster/wiki) zu finden.
