@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('baumkataster.urls'))
+    path('api/trees/', include('baumkataster.urls'))
+
 ]

@@ -15,8 +15,8 @@ class TreeView(View):
         trees = Tree.objects.all()
         return JsonResponse([model_to_dict(t) for t in trees], safe=False)
 
-    def get(self, request, id):
-        tree = Tree.objects.get(pk=id)
+    def get(self, request, pk):
+        tree = Tree.objects.get(pk=pk)
         return JsonResponse(model_to_dict(tree))
 
     def post(self, request):
@@ -40,8 +40,8 @@ class TreeView(View):
         response.headers["Content-Type"] = "application/json"
         return response
 
-    def put(self, request, id):
-        tree = Tree.objects.get(pk=id)
+    def put(self, request, pk):
+        tree = Tree.objects.get(pk=pk)
 
         data = json.loads(request.body)
         tree.update(data)
@@ -52,8 +52,8 @@ class TreeView(View):
         response.headers["Content-Type"] = "application/json"
         return response
 
-    def delete(self, request, id):
-        tree = Tree.objects.get(pk=id)
+    def delete(self, request, pk):
+        tree = Tree.objects.get(pk=pk)
         tree.delete()
 
         response = HttpResponse("")

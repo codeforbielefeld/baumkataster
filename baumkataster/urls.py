@@ -1,15 +1,16 @@
 from django.http import JsonResponse
 from django.urls import path
-from django.views.decorators.csrf import csrf_exempt
 
-from baumkataster.views.TreeView import TreeView
+from baumkataster.views.SingleTreeView import SingleTreeView
+from baumkataster.views.TreesView import TreesView
 
-def hello_world(request):
+
+def hello_world():
     return JsonResponse({'message': 'Hallo Bielefeld!'})
 
 
 urlpatterns = [
     path('hello', hello_world),
-    path('trees', TreeView.index), #accesses tree-database and understands what we want to do (e.g. add/index/put...)
-    path('trees/<int:id>', csrf_exempt(TreeView.as_view())) #enables user to access specific tree by id
+    path('', TreesView.as_view()),
+    path('<str:pk>', SingleTreeView.as_view())
 ]

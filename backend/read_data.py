@@ -1,16 +1,15 @@
-from django.conf import settings
 import pandas as pd
-import csv
 import pyproj
 import sys
+
 sys.path.insert(0, "..")
-#settings.configure()
+# settings.configure()
 from ..baumkataster.models import Tree
 
-#read data
+# read data
 df = pd.read_csv("./Jupyter/Data/einzelbaeume.csv", delimiter=";")
 
-#rename columns
+# rename columns
 df = df.rename(columns={
     "WKT": "Geo",
     "baumart_de": "Baumart_Deutsch",
@@ -23,12 +22,14 @@ df = df.rename(columns={
     "kronendurc_output": "Kronendurchmesser_gerundet"
 })
 
-#convert Geoinformation in coordinates
+# convert Geoinformation in coordinates
 projection = pyproj.Proj(proj='utm', zone=32, ellps='WGS84')
 
+
 def unproject(wkt):
-	(x, y) = wkt.replace("POINT (", "").replace(")", "").split(" ")
-	return projection(x, y, inverse=True)
+    (x, y) = wkt.replace("POINT (", "").replace(")", "").split(" ")
+    return projection(x, y, inverse=True)
+
 
 df['coords'] = df["Geo"].apply(unproject)
 
@@ -36,14 +37,14 @@ print(df.head())
 
 print(df[10])
 
-for tree in df[:50]:
-    tree = Tree(oid = tree.oid,
-                name = tree.Baumart_Deutsch,
-                height = tree.Baumhoehe,
-                diameter = tree.Kronendurchmesser,
-                lat = tree.coords[0],
-                long = tree.coords[1],
-                type_of_care = tree.Pflege_Art_Nummer,
-                care_kind = tree.Plege_Art_Beschreibung,
-                user_list = []
+for tree in df:
+    tree = Tree(oid=tree.oid,
+                name=tree.Baumart_Deutsch,
+                height=tree.Baumhoehe,
+                diameter=tree.Kronendurchmesser,
+                lat=tree.coords[0],
+                long=tree.coords[1],
+                type_of_care=tree.Pflege_Art_Nummer,
+                care_kind=tree.Plege_Art_Beschreibung,
+                user_list=[]
                 )
