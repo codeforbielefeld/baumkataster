@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'graphene_django',
     'baumkataster',
     'corsheaders',
     'rest_framework',
@@ -130,3 +131,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000"
 ]
 CORS_ALLOW_CREDENTIALS = True
+
+GRAPHENE = {
+    "SCHEMA": "baumkataster.schema.schema"
+}
