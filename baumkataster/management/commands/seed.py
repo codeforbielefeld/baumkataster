@@ -38,16 +38,17 @@ class Command(BaseCommand):
         df['coords'] = df["Geo"].apply(unproject)
         #print(df.head())
         
-        for index, tree in df[:50].iterrows():
+        for index, tree in df.iterrows():
    
             tree = Tree(oid = tree.oid,
                         name = tree.Baumart_Deutsch,
                         height = tree.Baumhoehe,
                         diameter = tree.Kronendurchmesser,
-                        lat = tree.coords[0],
-                        long = tree.coords[1],
+                        lat = tree.coords[1],
+                        long = tree.coords[0],
                         type_of_care = tree.Pflege_Art_Nummer,
                         care_kind = tree.Pflege_Art_Beschreibung,
                         )
+            tree.save()
 
         self.stdout.write('done.')

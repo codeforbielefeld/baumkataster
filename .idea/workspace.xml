@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e14e5a34-da86-4572-9101-972f79692ba4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+    <list default="true" id="f90a7cee-3732-41dd-aab7-4772cbc725e1" name="Changes" comment="CRUD-API für Bäume hinzugefügt.">
+      <change beforePath="$PROJECT_DIR$/.idea/baumkataster.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/baumkataster.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baumkataster/management/commands/seed.py" beforeDir="false" afterPath="$PROJECT_DIR$/baumkataster/management/commands/seed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baumkataster/schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/baumkataster/schema.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,18 +30,88 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/helen/CloudStation/CodeForBielefeld/Baumkataster/baumkataster"
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/helen/CloudStation/CodeForBielefeld/Baumkataster/baumkataster",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "com.jetbrains.django.DjangoModulesConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
+    ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Server" type="Python.DjangoServer" factoryName="Django server">
+      <module name="baumkataster" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="backend.settings" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="SDK_NAME" value="Python 3.11 (baumkataster)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e14e5a34-da86-4572-9101-972f79692ba4" name="Changes" comment="" />
+      <changelist id="f90a7cee-3732-41dd-aab7-4772cbc725e1" name="Changes" comment="CRUD-API für Bäume hinzugefügt." />
       <created>1666809159938</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1666809159938</updated>
+      <workItem from="1675107415666" duration="69000" />
+      <workItem from="1678300998033" duration="3295000" />
     </task>
+    <task id="LOCAL-00001" summary="CRUD-API für Bäume hinzugefügt.">
+      <created>1674672280547</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674672280547</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CRUD-API für Bäume hinzugefügt." />
+    <option name="LAST_COMMIT_MESSAGE" value="CRUD-API für Bäume hinzugefügt." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/baumkataster$settings.coverage" NAME="settings Coverage Results" MODIFIED="1674671538070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend" />
+    <SUITE FILE_PATH="coverage/baumkataster$urls.coverage" NAME="urls Coverage Results" MODIFIED="1674671620894" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/baumkataster" />
   </component>
 </project>
