@@ -1,7 +1,7 @@
 import graphene
-from django.contrib.auth.models import User
 from graphene_django import DjangoObjectType
 
+from baumkataster.graphql.authentication.CreateUserMutation import CreateUserMutation
 from baumkataster.models import Tree
 
 
@@ -20,8 +20,12 @@ class Query(graphene.ObjectType):
     )
 
     def resolve_all_trees_in_radius(root, info, lat, long, radius=1):
-        return Tree.objects.filter(lat__range=(lat - radius, lat + radius), long__range=(long - radius, long + radius)).all()
+        return Tree.objects.filter(lat__range=(lat - radius, lat + radius),
+                                   long__range=(long - radius, long + radius)).all()
 
 
+class Mutation(graphene.ObjectType):
+    create_user = CreateUserMutation.Field()
 
-schema = graphene.Schema(query=Query)
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
